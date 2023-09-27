@@ -30,7 +30,7 @@ Alternatively, download the exe and run that
 After running the program. Input the path to the folder you wish to sort
 Select the types of files you want sorted. Click sort.
 
-![Alt text](image.png)
+![Alt text](screenshot.png)
 
 Warning: This program will move the files inside the target folder and create new folders so be careful where you use it. 
 
@@ -38,8 +38,8 @@ Warning: This program will move the files inside the target folder and create ne
 
 ## Technologies
 
-Python
-CustomTkinter
+- Python
+- CustomTkinter
 
 ## Status
 
