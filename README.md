@@ -34,8 +34,6 @@ Select the types of files you want sorted. Click sort.
 
 Warning: This program will move the files inside the target folder and create new folders so be careful where you use it. 
 
-
-
 ## Technologies
 
 - Python
@@ -49,6 +47,8 @@ In the future I would like to add an undo option to unsort files in case the wro
 
 ## License
 
-MIT License
+You can find the License for this project [here](LICENSE.md)
+
+This project is licensed under the terms of the MIT license.
 
 
