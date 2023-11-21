@@ -23,8 +23,6 @@ Run the file sorter with the following command:
 
 `python file-sorter-gui.py`
 
-Alternatively, download the exe and run that
-
 ## Usage
 
 After running the program. Input the path to the folder you wish to sort

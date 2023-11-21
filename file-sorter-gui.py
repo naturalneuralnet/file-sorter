@@ -1,16 +1,8 @@
 import customtkinter
 
-import tkinter as tk
-
-from tkinter import font as tkFont
-
-from tkinter.messagebox import showerror, showwarning, showinfo
-
 import os, shutil
 
-# Think I can just turn this into an exe and use it that way?
 
-# No need to make it into an installer?
 
   
 
@@ -19,12 +11,8 @@ import os, shutil
 # set color scheme
 
 customtkinter.set_appearance_mode("dark")
-
-  
-
 customtkinter.set_default_color_theme("green")
 
-  
 
 root = customtkinter.CTk()
 
@@ -32,26 +20,17 @@ root.maxsize(700, 650)
 
 root.title("File Sorter")
 
-# root.config(bg="black")
 
-# options = {"bg": "black"}
 
 def file_sorter():
-
     path = folder_name.get()
-
-   
     if not path:
 
-       
+        warning_label = customtkinter.CTkLabel(master=frame, text="Please enter a file path!", font=("Courier", 14), text_color="red")
 
-        label4 = customtkinter.CTkLabel(master=frame, text="Please enter a file path!", font=("Courier", 14), text_color="red")
-
-        label4.grid(row=5, column=0, pady=12, padx=10)
+        warning_label.grid(row=5, column=0, pady=12, padx=10)
 
     else:
-
-        print(path)
 
         path = path + "/"
 
@@ -93,11 +72,8 @@ def file_sorter():
             folder_names.append("exe files")
 
   
-  
-  
- # are there folders already?
 
-        # check if the folders for different files exist if not create them
+# check if the folders for different files exist if not create them
 
     for name in range(len(folder_names)):
 
@@ -108,8 +84,7 @@ def file_sorter():
        
   
 
-# # then move those files to the correct folder
-
+ # then move those files to the correct folder
 
         moved_types = []
 
@@ -147,21 +122,16 @@ def file_sorter():
 
         else:
 
-            print("There are files in this path that were not moved!")
-
-            print(moved_types)
 
             for types in moved_types:
 
-                    print(f"Only {types} were sorted.")
+                    some_success_label = customtkinter.CTkLabel(master=frame, text=f"Only {types} sorted!", text_color="white", font=("Courier", 14))
 
-                    label5 = customtkinter.CTkLabel(master=frame, text=f"Only {types} sorted!", text_color="white", font=("Courier", 14))
+                    some_success_label.grid(row=5, column=0, pady=12, padx=10)
 
-                    label5.grid(row=5, column=0, pady=12, padx=10)
-
-        label5 = customtkinter.CTkLabel(master=frame, text=f"Files in {path} sorted!", text_color="white",font=("Courier", 14))
+        sucess_label = customtkinter.CTkLabel(master=frame, text=f"Files in {path} sorted!", text_color="white",font=("Courier", 14))
         
-        label5.grid(row=5, column=0, pady=12, padx=10)
+        sucess_label.grid(row=5, column=0, pady=12, padx=10)
 
        
 
@@ -174,15 +144,15 @@ frame.grid(row=0, column=0, padx=10, pady=10)
 
   
 
-label= customtkinter.CTkLabel(master=frame, text="File Sorter", font=("Courier", 24) )
+title= customtkinter.CTkLabel(master=frame, text="File Sorter", font=("Courier", 24) )
 
-label.grid(row=1, column=0, pady=12, padx=10)
+title.grid(row=1, column=0, pady=12, padx=10)
 
   
 
-label2= customtkinter.CTkLabel(master=frame, text="Enter the full path of the folder you want sorted", font=("Courier", 14))
+info_label= customtkinter.CTkLabel(master=frame, text="Enter the full path of the folder you want sorted", font=("Courier", 14))
 
-label2.grid(row=2, column=0, pady=12, padx=10)
+info_label.grid(row=2, column=0, pady=12, padx=10)
 
   
 
@@ -198,9 +168,9 @@ path = folder_name.get()
   
   
 
-label3= customtkinter.CTkLabel(master=frame, text="Check which file types you wish to sort", font=("Courier", 14))
+checkbox_info_label= customtkinter.CTkLabel(master=frame, text="Check which file types you wish to sort", font=("Courier", 14))
 
-label3.grid(row=4, column=0, pady=12, padx=10)
+checkbox_info_label.grid(row=4, column=0, pady=12, padx=10)
 
   
 
